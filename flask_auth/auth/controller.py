@@ -1,15 +1,15 @@
 from werkzeug.security import generate_password_hash, check_password_hash
-from flaskauth import app
-from flaskauth.auth import auth
+from flask_auth import app
+from flask_auth.auth import auth
 from flask import request, make_response, jsonify, g, url_for
 from datetime import timedelta, datetime as dt
-from flaskauth.models.user import db, User, RefreshToken, UserSchema
+from flask_auth.models.user import db, User, RefreshToken, UserSchema
 from sqlalchemy.exc import SQLAlchemyError
 from cerberus import Validator, errors
-from flaskauth.service.errorhandler import CustomErrorHandler
-from flaskauth.queue.email import send_email
-from flaskauth.service.tokenservice import otp, secret, jwtEncode
-from flaskauth.service.api_response import success, error
+from flask_auth.service.errorhandler import CustomErrorHandler
+from flask_auth.queue.email import send_email
+from flask_auth.service.tokenservice import otp, secret, jwtEncode
+from flask_auth.service.api_response import success, error
 
 
 @auth.route("/register", methods=['POST'])
