@@ -1,8 +1,8 @@
-from flaskauth import app
+from flask_auth import app
 from flask import request
-from flaskauth.models.user import db, User, UserSchema
-from flaskauth.service.authservice import auth_required
-from flaskauth.service.api_response import success, error
+from flask_auth.models.user import db, User, UserSchema
+from flask_auth.service.authservice import auth_required
+from flask_auth.service.api_response import success, error
 from cerberus import Validator, errors
 
 @app.route("/users/profile", methods=['GET'])
