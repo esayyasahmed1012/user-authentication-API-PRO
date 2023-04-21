@@ -1,6 +1,6 @@
-from flaskauth.queue import queue
+from flask_auth.queue import queue
 from flask import render_template
-from flaskauth import app, celery
+from flask_auth import app, celery
 from flask_mail import Mail, Message
 
 # app = create_app()
