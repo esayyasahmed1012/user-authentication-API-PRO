@@ -29,10 +29,10 @@ def create_app(test_config=None):
 
 app = create_app(test_config=None)
 
-from flaskauth.models.base_model import db, BaseModel
+from flask_auth.models.base_model import db, BaseModel
 db.init_app(app)
 
-from flaskauth.models.user import User
+from flask_auth.models.user import User
 
 
 from celery import Celery
@@ -51,9 +51,9 @@ def make_celery(app):
 
 celery = make_celery(app)
 
-from flaskauth.auth import auth
-from flaskauth.queue import queue
-from flaskauth.controllers import user
+from flask_auth.auth import auth
+from flask_auth.queue import queue
+from flask_auth.controllers import user
 
 
 app.register_blueprint(auth, url_prefix='/auth')
