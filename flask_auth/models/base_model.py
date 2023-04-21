@@ -1,7 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from sqlalchemy.ext.declarative import declared_attr
-from flaskauth import app
+from flask_auth import app
 
 _PLURALS = {"y": "ies"}
 
