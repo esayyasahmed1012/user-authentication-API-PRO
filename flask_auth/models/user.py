@@ -1,7 +1,7 @@
 """User models."""
 from datetime import datetime
-from flaskauth.models.base_model import BaseModel, db, ma
-from flaskauth.models.country import Country
+from flask_auth.models.base_model import BaseModel, db, ma
+from flask_auth.models.country import Country
 
 class User(db.Model, BaseModel):
 	__tablename__ = "users"
