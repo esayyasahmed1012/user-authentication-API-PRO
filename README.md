@@ -1,1 +1,1 @@
-User Authentication API
+User Authentication
